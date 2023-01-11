@@ -1,0 +1,16 @@
+import random
+lst=['A','C','G','T']*4
+random.shuffle(lst)
+a="".join(lst)
+random.shuffle(lst)
+b="".join(lst)
+print(a)
+print(b)
+mx=[[0]*16]*16
+print(mx)
+for i in range(1,a.length()+1):
+    for j in range(1,b.length()+1):
+        if(a[i-1] == b[j-1]):
+            mx[i][j] = mx[i-1][j-1]+2
+        else:
+            
